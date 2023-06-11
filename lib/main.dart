@@ -6,25 +6,25 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Home(),
+      home: const Home(),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.light,
-        primarySwatch: Colors.indigo,
-        primaryColor: Color(0xFF5d5fee),
-        scaffoldBackgroundColor: Color(0xFFf8f7fd),
-        backgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(
+        primaryColor: const Color(0xFF5d5fee),
+        scaffoldBackgroundColor: const Color(0xFFf8f7fd),
+        appBarTheme: const AppBarTheme(
           elevation: 0,
           brightness: Brightness.light,
           backgroundColor: Colors.transparent,
           textTheme: TextTheme(
-            headline6: TextStyle(
+            titleLarge: TextStyle(
               color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.w500,
@@ -35,12 +35,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
         textTheme: TextTheme(
-          headline4: TextStyle(
+          headlineMedium: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
             color: Colors.grey.shade900,
           ),
-          bodyText2: TextStyle(
+          bodyMedium: TextStyle(
             fontSize: 14,
             color: Colors.grey.shade900,
           ),
@@ -48,63 +48,63 @@ class MyApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            primary: Color(0xFF5d5fee),
-            padding: EdgeInsets.fromLTRB(18, 10, 18, 10),
+            primary: const Color(0xFF5d5fee),
+            padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
             ),
           ),
         ),
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.black,
         ),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo),
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-        primarySwatch: Colors.indigo,
-        primaryColor: Color(0xFF5d5fee),
-        scaffoldBackgroundColor: Color(0xFF0a0a0a),
-        backgroundColor: Color(0xFF29292b),
-        appBarTheme: AppBarTheme(
-          elevation: 0,
-          brightness: Brightness.dark,
-          backgroundColor: Colors.transparent,
-          textTheme: TextTheme(
-            headline6: TextStyle(
-              color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          iconTheme: IconThemeData(
-            color: Colors.white,
-          ),
-        ),
-        textTheme: TextTheme(
-          headline4: TextStyle(
-            fontWeight: FontWeight.w600,
-            color: Colors.white,
-            fontSize: 16,
-          ),
-          bodyText2: TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-          ),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            elevation: 0,
-            primary: Color(0xFF5d5fee),
-            padding: EdgeInsets.fromLTRB(18, 10, 18, 10),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-            ),
-          ),
-        ),
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
-      ),
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark,
+      //   primaryColor: const Color(0xFF5d5fee),
+      //   scaffoldBackgroundColor: const Color(0xFF0a0a0a),
+      //   appBarTheme: const AppBarTheme(
+      //     elevation: 0,
+      //     brightness: Brightness.dark,
+      //     backgroundColor: Colors.transparent,
+      //     textTheme: TextTheme(
+      //       titleLarge: TextStyle(
+      //         color: Colors.white,
+      //         fontSize: 16,
+      //         fontWeight: FontWeight.w500,
+      //       ),
+      //     ),
+      //     iconTheme: IconThemeData(
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      //   textTheme: const TextTheme(
+      //     headlineMedium: TextStyle(
+      //       fontWeight: FontWeight.w600,
+      //       color: Colors.white,
+      //       fontSize: 16,
+      //     ),
+      //     bodyMedium: TextStyle(
+      //       color: Colors.white,
+      //       fontSize: 14,
+      //     ),
+      //   ),
+      //   elevatedButtonTheme: ElevatedButtonThemeData(
+      //     style: ElevatedButton.styleFrom(
+      //       elevation: 0,
+      //       backgroundColor: const Color(0xFF5d5fee),
+      //       padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
+      //       shape: RoundedRectangleBorder(
+      //         borderRadius: BorderRadius.circular(16),
+      //       ),
+      //     ),
+      //   ),
+      //   iconTheme: const IconThemeData(
+      //     color: Colors.white,
+      //   ),
+      //   colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo),
+      // ),
     );
   }
 }

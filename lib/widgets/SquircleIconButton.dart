@@ -18,8 +18,8 @@ class SquircleIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: DynamicColor.withBrightness(
           context: context,
-          color: Color(0xFFebf0fd),
-          darkColor: Color(0xFF2a2b29),
+          color: const Color(0xFFebf0fd),
+          darkColor: const Color(0xFF2a2b29),
         ),
       ),
       child: IconButton(
@@ -29,7 +29,7 @@ class SquircleIconButton extends StatelessWidget {
         highlightColor: Colors.transparent,
         color: DynamicColor.withBrightness(
           context: context,
-          color: Color(0xFF1e1132),
+          color: const Color(0xFF1e1132),
           darkColor: theme.primaryColor,
         ),
       ),

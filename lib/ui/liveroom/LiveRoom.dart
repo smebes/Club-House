@@ -11,73 +11,73 @@ class LiveRoom extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final members = [
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Sarah",
         isModerator: true,
         isMuted: false,
         imagePath: "assets/images/3.png",
         color: MemojiColors.black,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Daniel",
         isModerator: true,
         imagePath: "assets/images/2.png",
         color: MemojiColors.amber,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Samantha",
         isModerator: true,
         imagePath: "assets/images/4.png",
         color: MemojiColors.white,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Aishat",
         isModerator: true,
         imagePath: "assets/images/6.png",
         color: MemojiColors.yellow,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Ruth",
         isModerator: true,
         imagePath: "assets/images/5.png",
         color: MemojiColors.green,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Rich",
         imagePath: "assets/images/1.png",
         color: MemojiColors.red,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Sarah",
         isNewMember: true,
         imagePath: "assets/images/7.png",
         color: MemojiColors.blue,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Mercy",
         isNewMember: true,
         imagePath: "assets/images/8.png",
         color: MemojiColors.white,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Tim",
         isNewMember: true,
         imagePath: "assets/images/9.png",
         color: MemojiColors.purple,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Ed",
         isNewMember: true,
         imagePath: "assets/images/10.png",
         color: MemojiColors.yellow,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "John",
         isNewMember: true,
         imagePath: "assets/images/11.png",
         color: MemojiColors.green,
       ),
-      LiveRoomMember(
+      const LiveRoomMember(
         name: "Lauret",
         isNewMember: true,
         imagePath: "assets/images/12.png",
@@ -88,11 +88,11 @@ class LiveRoom extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Design talk and chill"),
+          title: const Text("Design talk and chill"),
           leading: Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: IconButton(
-              icon: Icon(CupertinoIcons.chevron_down),
+              icon: const Icon(CupertinoIcons.chevron_down),
               onPressed: () {
                 Navigator.maybePop(context);
               },
@@ -103,9 +103,9 @@ class LiveRoom extends StatelessWidget {
           children: [
             Expanded(
               child: GridView.builder(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 itemCount: members.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   childAspectRatio: 1 / 1,
                   mainAxisSpacing: 20,
@@ -117,10 +117,10 @@ class LiveRoom extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.fromLTRB(20, 15, 20, 20),
+              padding: const EdgeInsets.fromLTRB(20, 15, 20, 20),
               decoration: BoxDecoration(
                 color: theme.primaryColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(32),
                   topRight: Radius.circular(32),
                 ),
@@ -137,19 +137,19 @@ class LiveRoom extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     children: [
                       Expanded(
                         child: TextField(
                           maxLines: null,
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                           decoration: InputDecoration(
                             filled: true,
-                            fillColor: Color(0xFF8281ea),
+                            fillColor: const Color(0xFF8281ea),
                             hintText: "Type a thought here...",
-                            hintStyle: TextStyle(color: Colors.white70),
-                            contentPadding: EdgeInsets.fromLTRB(16, 8, 16, 8),
+                            hintStyle: const TextStyle(color: Colors.white70),
+                            contentPadding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide: BorderSide.none,
@@ -157,12 +157,12 @@ class LiveRoom extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       CircleAvatar(
                         radius: 24,
                         backgroundColor: Colors.white,
                         foregroundColor: theme.primaryColor,
-                        child: Icon(CupertinoIcons.paperplane_fill),
+                        child: const Icon(CupertinoIcons.paperplane_fill),
                       ),
                     ],
                   ),
@@ -174,11 +174,11 @@ class LiveRoom extends StatelessWidget {
         bottomNavigationBar: ColoredBox(
           color: theme.primaryColor,
           child: Container(
-            padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+            padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
             height: 110,
             decoration: BoxDecoration(
               color: theme.scaffoldBackgroundColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(32),
                 topRight: Radius.circular(32),
               ),
@@ -188,55 +188,54 @@ class LiveRoom extends StatelessWidget {
               child: Row(
                 children: [
                   TextButton.icon(
-                    icon: Text(
+                    icon: const Text(
                       "✌🏼",
                       style: TextStyle(fontSize: 18),
                     ),
-                    label: Text("Leave quietly"),
+                    label: const Text("Leave quietly"),
                     style: TextButton.styleFrom(
-                      primary: DynamicColor.withBrightness(
+                      foregroundColor: DynamicColor.withBrightness(
                         context: context,
                         color: theme.primaryColor,
-                        darkColor: Color(0xFF9d97ec),
-                      ),
-                      textStyle: TextStyle(
+                        darkColor: const Color(0xFF9d97ec),
+                      ), textStyle: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                       ),
-                      padding: EdgeInsets.fromLTRB(16, 10, 16, 10),
+                      padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(22),
                       ),
                       backgroundColor: DynamicColor.withBrightness(
                         context: context,
-                        color: Color(0xFFeff0f5),
-                        darkColor: Color(0xFF2a2b29),
+                        color: const Color(0xFFeff0f5),
+                        darkColor: const Color(0xFF2a2b29),
                       ),
                     ),
                     onPressed: () {},
                   ),
-                  Spacer(),
+                  const Spacer(),
                   CircleAvatar(
                     radius: 24,
                     backgroundColor: DynamicColor.withBrightness(
                       context: context,
-                      color: Color(0xFFeff0f5),
-                      darkColor: Color(0xFF2a2b29),
+                      color: const Color(0xFFeff0f5),
+                      darkColor: const Color(0xFF2a2b29),
                     ),
-                    child: Text(
+                    child: const Text(
                       "✋🏼",
                       style: TextStyle(fontSize: 18),
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   CircleAvatar(
                     radius: 24,
-                    child: Image.asset("assets/images/10.png"),
                     backgroundColor: DynamicColor.withBrightness(
                       context: context,
-                      color: Color(0xFFeff0f5),
-                      darkColor: Color(0xFF2a2b29),
+                      color: const Color(0xFFeff0f5),
+                      darkColor: const Color(0xFF2a2b29),
                     ),
+                    child: Image.asset("assets/images/10.png"),
                   ),
                 ],
               ),

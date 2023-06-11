@@ -14,14 +14,14 @@ class HomeUpcoming extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Container(
-      margin: EdgeInsets.only(bottom: 20),
-      padding: EdgeInsets.fromLTRB(20, 34, 24, 34),
+      margin: const EdgeInsets.only(bottom: 20),
+      padding: const EdgeInsets.fromLTRB(20, 34, 24, 34),
       decoration: BoxDecoration(
         color: theme.primaryColor,
         borderRadius: BorderRadius.circular(24),
       ),
       child: DecoratedBox(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           border: Border(
             left: BorderSide(
               width: 3,
@@ -31,21 +31,21 @@ class HomeUpcoming extends StatelessWidget {
         ),
         child: Row(
           children: [
-            SizedBox(width: 15),
+            const SizedBox(width: 15),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "$time",
-                  style: TextStyle(
+                  time,
+                  style: const TextStyle(
                     fontSize: 16,
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
-                  "$title",
-                  style: TextStyle(
+                  title,
+                  style: const TextStyle(
                     fontSize: 18,
                     color: Colors.white,
                     fontWeight: FontWeight.w500,
@@ -53,8 +53,8 @@ class HomeUpcoming extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
-            Icon(
+            const Spacer(),
+            const Icon(
               CupertinoIcons.chevron_down,
               color: Colors.white,
             )

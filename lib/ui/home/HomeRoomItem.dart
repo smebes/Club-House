@@ -16,28 +16,28 @@ class HomeRoomItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             fullscreenDialog: true,
-            builder: (_) => LiveRoom(),
+            builder: (_) => const LiveRoom(),
           ),
         );
       },
       child: Container(
-        margin: EdgeInsets.only(bottom: 20),
-        padding: EdgeInsets.fromLTRB(30, 24, 30, 24),
+        margin: const EdgeInsets.only(bottom: 20),
+        padding: const EdgeInsets.fromLTRB(30, 24, 30, 24),
         decoration: BoxDecoration(
-          color: theme.backgroundColor,
+          color: theme.colorScheme.background,
           borderRadius: BorderRadius.circular(24),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "STARTUP CLUB",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               "Pitch your start up idea to VCs & top Entrepreneurs",
               style: TextStyle(
@@ -49,27 +49,27 @@ class HomeRoomItem extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               children: [
-                Squircle(),
-                SizedBox(width: 5),
-                Squircle(),
-                SizedBox(width: 5),
-                Squircle(),
-                Spacer(),
+                const Squircle(),
+                const SizedBox(width: 5),
+                const Squircle(),
+                const SizedBox(width: 5),
+                const Squircle(),
+                const Spacer(),
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     color: DynamicColor.withBrightness(
                       context: context,
-                      color: Color(0xFFeff0f5),
-                      darkColor: Color(0xFF404182),
+                      color: const Color(0xFFeff0f5),
+                      darkColor: const Color(0xFF404182),
                     ),
                   ),
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         CupertinoIcons.person_fill,
                         size: 18,

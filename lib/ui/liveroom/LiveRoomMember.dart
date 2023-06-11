@@ -42,12 +42,12 @@ class LiveRoomMember extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     child: CircleAvatar(
                       radius: 13,
-                      child: Text("🎉"),
                       backgroundColor: DynamicColor.withBrightness(
                         context: context,
                         color: Colors.white,
-                        darkColor: theme.backgroundColor,
+                        darkColor: theme.colorScheme.background,
                       ),
+                      child: const Text("🎉"),
                     ),
                   ),
                 if (isMuted)
@@ -58,7 +58,7 @@ class LiveRoomMember extends StatelessWidget {
                       backgroundColor: DynamicColor.withBrightness(
                         context: context,
                         color: Colors.white,
-                        darkColor: theme.backgroundColor,
+                        darkColor: theme.colorScheme.background,
                       ),
                       child: Icon(
                         CupertinoIcons.mic_slash,
@@ -75,13 +75,13 @@ class LiveRoomMember extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 8),
+        const SizedBox(height: 8),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (isModerator)
               Stack(
-                children: [
+                children: const [
                   Icon(
                     CupertinoIcons.asterisk_circle,
                     color: Colors.white,
@@ -94,10 +94,10 @@ class LiveRoomMember extends StatelessWidget {
                   ),
                 ],
               ),
-            SizedBox(width: 3),
+            const SizedBox(width: 3),
             Text(
-              "$name",
-              style: TextStyle(
+              name,
+              style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
               ),
